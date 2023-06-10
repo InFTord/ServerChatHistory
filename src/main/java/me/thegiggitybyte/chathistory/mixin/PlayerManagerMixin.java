@@ -24,7 +24,7 @@ public class PlayerManagerMixin {
     @Inject(method = "broadcast(Lnet/minecraft/text/Text;Ljava/util/function/Function;Z)V",
             at = @At("HEAD"))
     public void cacheGameMessage(Text message, Function<ServerPlayerEntity, Text> playerMessageFactory, boolean overlay, CallbackInfo ci) {
-        if (overlay == true) return;
+        if (overlay) return;
         ChatHistory.MESSAGE_CACHE.add(new CachedMessage(message));
     }
     

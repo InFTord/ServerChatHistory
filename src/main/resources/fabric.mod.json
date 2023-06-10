@@ -44,7 +44,7 @@
     "chathistory.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.9.3+build.207",
-    "minecraft": ">=1.19.3"
+    "fabricloader" : ">=0.13.0",
+    "minecraft": ">=1.20"
   }
 }

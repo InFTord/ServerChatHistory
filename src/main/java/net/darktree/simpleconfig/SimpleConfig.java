@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -14,7 +15,7 @@ import java.util.Scanner;
 
 /**
  * Mod configuration library.
- * https://github.com/magistermaks/fabric-simplelibs/tree/master/simple-config
+ * <a href="https://github.com/magistermaks/fabric-simplelibs/tree/master/simple-config">...</a>
  */
 public class SimpleConfig {
     
@@ -91,7 +92,7 @@ public class SimpleConfig {
         Files.createFile( request.file.toPath() );
         
         // write default config data
-        PrintWriter writer = new PrintWriter(request.file, "UTF-8");
+        PrintWriter writer = new PrintWriter(request.file, StandardCharsets.UTF_8);
         writer.write( request.getConfig() );
         writer.close();
         
